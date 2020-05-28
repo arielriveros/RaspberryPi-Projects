@@ -1,5 +1,5 @@
 import sys
-sys.path.insert(1,'/home/pi/Documents/Programs/Robotics')
+sys.path.insert(1,'/home/pi/Documents/RaspberryPi-Projects/Robotics')
 from Servo import Servo_setup, Servo_control
 import RPi.GPIO as GPIO
 from time import sleep
@@ -8,7 +8,7 @@ servo_test = Servo_setup(21)
 
 lis1=[2.5,3,4,5,6,7,8,9,10,11,12.5]
 
-print("Servo Setup Test")
+print("Micro Servo SG90 Setup Test")
 
 for i in lis1:
        	servo_test.move(i, .1)
@@ -44,10 +44,10 @@ servo_control.maxPos()
 sleep(1)
 print("...")
 servo_control.moveToInit()
-sleep(2)
+sleep(1)
 print("Positive Sweep 10ms")
 servo_control.positiveSweep(0.01)
-sleep(1)
+sleep(2)
 print("Positive Sweep 15ms")
 servo_control.positiveSweep(0.015)
 sleep(1)

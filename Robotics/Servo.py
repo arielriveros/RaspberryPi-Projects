@@ -52,14 +52,14 @@ class Servo_control:
 		self.servo.move(self.initPos,0.01)
 	def positiveSweep(self,time_step):
 		self.minPos()
-		time.sleep(0.1)
+		time.sleep(time_step*10)
 		for i in range(100):
 			self.servo.move(2.5+(i/10),0.001)
 			time.sleep(time_step)
 		self.moveToInit()
 	def negativeSweep(self,time_step):
 		self.maxPos()
-		time.sleep(0.1)
+		time.sleep(time_step*10)
 		for i in range(100):
 			self.servo.move(12.5-(i/10),0.001)
 			time.sleep(time_step)

@@ -1,6 +1,6 @@
 import importlib
 import sys
-sys.path.insert(1,'/home/pi/Documents/Programs/Robotics')
+sys.path.insert(1,'/home/pi/Documents/RaspberryPi-Projects/Robotics')
 from time import sleep
 from LEDs import LED_setup, LED_control
 
@@ -22,6 +22,7 @@ while(x<10):
 print("100ms Inclusive Sequence")
 x=0
 while(x<10):
+	sleep(0.1)
 	control.sequence(0.1,'inclusive')
 	x=x+1
 print("100ms Exclusive Sequence")
