@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body{
+                background-color: rgb(124, 160, 135);
+            }
+
+            h1{
+                text-align: center;
+            }
+            h2{
+                text-align:center;
+            }         
+            button{
+                width: 60px;
+                height:50px;
+                text-align: center;
+            }   
+        </style>
+        <title>Raspberry Web Controller</title>
+    </head>
+<body>
+    
+    <h1>
+        Raspberry Web Controller
+    </h1>
+<br>
+<div style="background-color: rgba(67, 219, 219, 0.582); width: 300px; margin: 20px; padding: 20px;">
+    <h2>
+        Controls
+    </h2>
+    <div style="background-color:rgb(41, 171, 194); width:300px; padding:20px; box-sizing: border-box;">
+    <input type="button" id='script' name="Led test" value="Test Leds" onclick="LedTest()">
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script>
+	function LedTest() {
+    $.ajax({
+        type: "POST",
+        url: "LedTest.py",
+        dataType: "html",
+        success: function(msg) {
+            console.log(msg);
+            $("#swiss").html(msg);
+        },
+        error: function (xhr, status, error) {
+            console.log(error);
+        }
+    });
+}
+    </script>
+    </div>
+</div>
+</div>
+<div style="align-self: center; padding-top: 50px;">
+<h2>Camera</h2>
+</div>
+
+</body>
+
+
+</html>

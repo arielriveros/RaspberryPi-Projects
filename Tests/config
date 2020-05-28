@@ -1,0 +1,10 @@
+TESTING:
+
+Component    pin (BCM)	Resistor(Ohm)
+
+Red Led		2	100
+Blue Led	3	100
+Green Led	17	100
+Yellow Led	18	100
+White Led	27	100
+Servo		21	1k
