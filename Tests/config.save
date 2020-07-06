@@ -12,7 +12,6 @@ White Led	27	100
 Servo		21	1k
 
 Sensor:
-Echo		6	1k serie 2K
-Trigger		12	NONE
+Echo		6	NONETrigger		12	NONE
 Green Led	20	100
 Yellow Led	16	~400
